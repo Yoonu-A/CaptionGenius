@@ -355,27 +355,36 @@
     english: {
       global: ['#Viral', '#TrendingNow', '#ContentCreator', '#ExplorePage', '#FYP', '#CreatorsOfTikTok', '#ReelsInstagram', '#VibeCheck', '#MustWatch', '#SocialMediaGrowth'],
       srilanka: ['#SriLanka', '#VisitSriLanka', '#Colombo', '#SriLankaDaily', '#Ceylon', '#LKA', '#IslandLife', '#TravelSriLanka', '#SriLankanCreators', '#EllaSriLanka'],
+      funny: ['#FunnyVideo', '#Relatable', '#ComedyReels', '#LaughDaily', '#MemesDaily', '#TagAFriend', '#Lmao', '#Hilarious', '#DailyHumor'],
       humor: ['#FunnyVideo', '#Relatable', '#ComedyReels', '#LaughDaily', '#MemesDaily', '#TagAFriend', '#Lmao'],
+      professional: ['#BusinessTips', '#EntrepreneurMindset', '#GrowthHacking', '#Freelancing', '#DigitalMarketing', '#SuccessMindset', '#ProductivityHacks', '#Leadership', '#CareerAdvice'],
       business: ['#BusinessTips', '#EntrepreneurMindset', '#GrowthHacking', '#Freelancing', '#DigitalMarketing', '#SuccessMindset', '#ProductivityHacks'],
+      inspirational: ['#MotivationDaily', '#NeverGiveUp', '#InspirationalQuotes', '#MindsetShift', '#DreamBig', '#Overcome', '#SelfGrowth', '#HustleHard', '#Discipline'],
       inspiration: ['#MotivationDaily', '#NeverGiveUp', '#InspirationalQuotes', '#MindsetShift', '#DreamBig', '#Overcome', '#SelfGrowth'],
-      romantic: ['#LoveStory', '#CoupleGoals', '#RomanticVibes', '#HeartfeltMoments', '#Soulmate', '#LoveQuotes'],
-      aesthetic: ['#AestheticVibes', '#CozyMoments', '#SoftAesthetic', '#VisualPoetry', '#MoodBoard', '#PeacefulVibes']
+      romantic: ['#LoveStory', '#CoupleGoals', '#RomanticVibes', '#HeartfeltMoments', '#Soulmate', '#LoveQuotes', '#ForeverAndAlways', '#TrueLove'],
+      aesthetic: ['#AestheticVibes', '#CozyMoments', '#SoftAesthetic', '#VisualPoetry', '#MoodBoard', '#PeacefulVibes', '#GoldenHour', '#MinimalistVibes']
     },
     sinhala: {
       global: ['#srilanka', '#sinhala', '#trending_srilanka', '#tiktok_srilanka', '#lka', '#ceylon', '#colombo', '#viral_sinhala', '#srilankatiktok', '#sinhalareels'],
-      humor: ['#ආතල්_ලෝකය', '#ලංකාවේ_අපි', '#හිනාවෙමු', '#funny_sinhala', '#lka_memes', '#trending_lka', '#sinhalameme', '#srilankancomedy'],
-      business: ['#ව්‍යාපාරික_දැනුම', '#සාර්ථකත්වය', '#මුදල්', '#onlinebusiness_srilanka', '#freelance_srilanka', '#sinhalamotivation', '#startup_lk'],
-      inspiration: ['#ජීවිතය', '#ධෛර්යය', '#සිහින', '#sinhalapoem', '#motivation_sinhala', '#nevergiveup_lk', '#hustle_srilanka'],
-      romantic: ['#ආදරය', '#නුඹ_මගේ', '#හදවත', '#sinhalasongs', '#romantic_sinhala', '#love_srilanka', '#sad_sinhala'],
-      aesthetic: ['#සුන්දර_ලංකාව', '#සන්සුන්_හැන්දෑව', '#නිදහස', '#ceylon_beauty', '#nature_srilanka', '#aesthetic_lk', '#ella_srilanka']
+      funny: ['#ආතල්_ලෝකය', '#ලංකාවේ_අපි', '#හිනාවෙමු', '#funny_sinhala', '#lka_memes', '#trending_lka', '#sinhalameme', '#srilankancomedy', '#athal_sinhala'],
+      humor: ['#ආතල්_ලෝකය', '#ලංකාවේ_අපි', '#හිනාවෙමු', '#funny_sinhala', '#lka_memes', '#trending_lka'],
+      professional: ['#ව්‍යාපාරික_දැනුම', '#සාර්ථකත්වය', '#මුදල්', '#onlinebusiness_srilanka', '#freelance_srilanka', '#sinhalamotivation', '#startup_lk', '#business_sinhala'],
+      business: ['#ව්‍යාපාරික_දැනුම', '#සාර්ථකත්වය', '#මුදල්', '#onlinebusiness_srilanka', '#freelance_srilanka'],
+      inspirational: ['#ජීවිතය', '#ධෛර්යය', '#සිහින', '#sinhalapoem', '#motivation_sinhala', '#nevergiveup_lk', '#hustle_srilanka', '#sinhalathoughts', '#viralsinhala'],
+      inspiration: ['#ජීවිතය', '#ධෛර්යය', '#සිහින', '#sinhalapoem', '#motivation_sinhala', '#nevergiveup_lk'],
+      romantic: ['#ආදරය', '#නුඹ_මගේ', '#හදවත', '#sinhalasongs', '#romantic_sinhala', '#love_srilanka', '#sad_sinhala', '#sinhalalove', '#pathum'],
+      aesthetic: ['#සුන්දර_ලංකාව', '#සන්සුන්_හැන්දෑව', '#නිදහස', '#ceylon_beauty', '#nature_srilanka', '#aesthetic_lk', '#ella_srilanka', '#visitsrilanka']
     },
     tamil: {
       global: ['#srilanka', '#tamil', '#srilankatamil', '#jaffna', '#colombo', '#tamiltiktok', '#trending_tamil', '#viral_tamil', '#tamilcreator', '#tamilsrilanka'],
-      humor: ['#நகைச்சுவை', '#தமிழ்மீம்ஸ்', '#சிரிப்பு', '#tamilcomedy', '#tamilhumor', '#tamillmaofun', '#trendingnow_tamil'],
-      business: ['#வணிகம்', '#முன்னேற்றம்', '#வெற்றி', '#tamilentrepreneur', '#tamilbusiness', '#tamiltech', '#tamilmoney'],
-      inspiration: ['#உத்வேகம்', '#விடாமுயற்சி', '#நம்பிக்கை', '#tamilmotivation', '#tamilstatus', '#tamilquotes', '#success_tamil'],
-      romantic: ['#காதல்', '#கவிதைகள்', '#என்_அன்பு', '#tamilromance', '#tamillove', '#tamilsonglyrics', '#tamilbgm'],
-      aesthetic: ['#அழகு', '#இயற்கை', '#அமைதி', '#tamilaesthetic', '#jaffnavibes', '#srilankatamilculture', '#tamiltravel']
+      funny: ['#நகைச்சுவை', '#தமிழ்மீம்ஸ்', '#சிரிப்பு', '#tamilcomedy', '#tamilhumor', '#tamillmaofun', '#trendingnow_tamil', '#srilankatamilcomedy'],
+      humor: ['#நகைச்சுவை', '#தமிழ்மீம்ஸ்', '#சிரிப்பு', '#tamilcomedy', '#tamilhumor', '#tamillmaofun'],
+      professional: ['#வணிகம்', '#முன்னேற்றம்', '#வெற்றி', '#tamilentrepreneur', '#tamilbusiness', '#tamiltech', '#tamilmoney', '#tamilmarketing'],
+      business: ['#வணிகம்', '#முன்னேற்றம்', '#வெற்றி', '#tamilentrepreneur', '#tamilbusiness', '#tamiltech'],
+      inspirational: ['#உத்வேகம்', '#விடாமுயற்சி', '#நம்பிக்கை', '#tamilmotivation', '#tamilstatus', '#tamilquotes', '#success_tamil', '#tamilthoughts'],
+      inspiration: ['#உத்வேகம்', '#விடாமுயற்சி', '#நம்பிக்கை', '#tamilmotivation', '#tamilstatus', '#tamilquotes'],
+      romantic: ['#காதல்', '#கவிதைகள்', '#என்_அன்பு', '#tamilromance', '#tamillove', '#tamilsonglyrics', '#tamilbgm', '#tamilstatuslove'],
+      aesthetic: ['#அழகு', '#இயற்கை', '#அமைதி', '#tamilaesthetic', '#jaffnavibes', '#srilankatamilculture', '#tamiltravel', '#visitsrilanka']
     }
   };
 
@@ -573,15 +582,16 @@
   // Helper to bundle curated hashtags
   function getHashtags(lang, tone, platform, count) {
     const langVault = HASHTAG_VAULT[lang] || HASHTAG_VAULT.english;
-    const toneTags = langVault[tone] || langVault.humor;
+    const toneTags = langVault[tone] || langVault.funny || langVault.humor || [];
     const globalTags = langVault.global || [];
-    const slTags = HASHTAG_VAULT.english.srilanka;
+    const slTags = HASHTAG_VAULT.english.srilanka || [];
 
+    const platName = platform === 'tiktok' ? 'TikTok' : platform === 'instagram' ? 'Instagram' : platform === 'facebook' ? 'Facebook' : 'YouTube';
     const combined = Array.from(new Set([
       ...toneTags,
       ...globalTags,
       ...slTags,
-      `#${platform}`,
+      `#${platName}`,
       `#Trending`
     ]));
 
@@ -983,14 +993,28 @@ Output ONLY valid JSON without markdown code fences in this EXACT format:
   function fallbackCopy(text, successMsg) {
     const textArea = document.createElement('textarea');
     textArea.value = text;
+    textArea.setAttribute('readonly', '');
     textArea.style.position = 'fixed';
-    textArea.style.left = '-9999px';
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = '0';
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
+    textArea.setSelectionRange(0, 99999);
     try {
-      document.execCommand('copy');
-      showToast(successMsg, 'success');
+      const successful = document.execCommand('copy');
+      if (successful) {
+        showToast(successMsg, 'success');
+      } else {
+        showToast('Please select and copy manually.', 'info');
+      }
     } catch (err) {
       showToast('Could not copy to clipboard. Please select text manually.', 'error');
     }

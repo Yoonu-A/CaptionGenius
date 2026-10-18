@@ -1,0 +1,28 @@
+{
+  "name": "captiongenius-ai",
+  "version": "1.0.0",
+  "description": "AI-Powered Social Media Caption & Hook Generator for Sri Lanka and Global Creators",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "caption-generator",
+    "ai",
+    "social-media",
+    "sri-lanka",
+    "sinhala",
+    "tamil",
+    "tiktok",
+    "instagram",
+    "pwa"
+  ],
+  "author": "CaptionGenius AI",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
