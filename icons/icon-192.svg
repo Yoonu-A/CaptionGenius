@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#0A0D17" />
+    </linearGradient>
+    <linearGradient id="primaryGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="50%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="sparkleGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#bgGrad192)" />
+  <rect width="190" height="190" x="1" y="1" rx="41" fill="none" stroke="url(#primaryGrad192)" stroke-width="2" stroke-opacity="0.5" />
+  
+  <path d="M52 68 C52 50 66 36 84 36 L122 36 C140 36 154 50 154 68 L154 102 C154 120 140 134 122 134 L92 134 L64 156 C60 159 54 157 54 151 L54 134 Z" fill="url(#primaryGrad192)" />
+  
+  <!-- AI Sparkle -->
+  <path d="M106 56 Q106 75 87 75 Q106 75 106 94 Q106 75 125 75 Q106 75 106 56 Z" fill="#FFFFFF" />
+  <rect x="68" y="105" width="34" height="5" rx="2.5" fill="#FFFFFF" opacity="0.8" />
+  <rect x="68" y="114" width="52" height="5" rx="2.5" fill="#FFFFFF" opacity="0.6" />
+  
+  <circle cx="132" cy="116" r="15" fill="#0F172A" stroke="url(#sparkleGrad192)" stroke-width="2" />
+  <text x="132" y="122" font-family="sans-serif" font-size="16" font-weight="900" fill="#EC4899" text-anchor="middle">#</text>
+</svg>

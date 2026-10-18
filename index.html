@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>CaptionGenius AI | Viral Social Media Caption & Hook Generator</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Generate viral, high-converting social media captions, hooks, and hashtags for TikTok, Instagram, Facebook, and YouTube. Tailored for creators in Sri Lanka and worldwide in English, Sinhala (සිංහල), and Tamil (தமிழ்).">
+  <meta name="keywords" content="Caption generator, AI captions, Sri Lanka social media, Sinhala caption, Tamil caption, TikTok hooks, Instagram hashtags, YouTube descriptions">
+  <meta name="author" content="CaptionGenius AI">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CaptionGenius AI | Social Media Caption Generator">
+  <meta property="og:description" content="AI-powered social caption generator for TikTok, IG, FB & YouTube in English, Sinhala & Tamil.">
+  <meta property="og:image" content="icons/icon-512.svg">
+
+  <!-- PWA & Mobile Web App Meta -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0A0D17">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CaptionGenius">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="app-header">
+    <div class="nav-container">
+      <div class="brand-group">
+        <div class="brand-logo" id="brandLogo">
+          <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#brandGrad)"/>
+            <path d="M12 14C12 10.6863 14.6863 8 18 8H26C29.3137 8 32 10.6863 32 14V20C32 23.3137 29.3137 26 26 26H20L14 31V26H12C8.68629 26 8 23.3137 8 20V14C8 10.6863 10.6863 8 14 8" fill="rgba(255,255,255,0.15)"/>
+            <path d="M22 13Q22 17 18 17Q22 17 22 21Q22 17 26 17Q22 17 22 13Z" fill="#FFFFFF"/>
+            <circle cx="28" cy="12" r="2" fill="#F472B6"/>
+            <defs>
+              <linearGradient id="brandGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#8B5CF6"/>
+                <stop offset="0.5" stop-color="#6366F1"/>
+                <stop offset="1" stop-color="#06B6D4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title-row">
+            <span class="brand-name">CaptionGenius</span>
+            <span class="badge-ai">AI</span>
+            <span class="badge-region" title="Tailored for Sri Lankan and Global Social Media">🇱🇰 Global</span>
+          </div>
+          <span class="brand-tagline">Viral Captions, Hooks &amp; Hashtags</span>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tabs" role="tablist">
+        <button class="nav-tab active" data-view="generator" role="tab" aria-selected="true" id="tabBtnGenerator">
+          <svg class="tab-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14H8a4 4 0 01-2.934-6.721l.135-.145A4 4 0 0112 7.172V14z"/>
+          </svg>
+          <span>Generator</span>
+        </button>
+        <button class="nav-tab" data-view="dashboard" role="tab" aria-selected="false" id="tabBtnDashboard">
+          <svg class="tab-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/>
+            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/>
+          </svg>
+          <span>Dashboard</span>
+        </button>
+        <button class="nav-tab" data-view="saved" role="tab" aria-selected="false" id="tabBtnSaved">
+          <svg class="tab-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
+          </svg>
+          <span>Saved</span>
+          <span class="count-pill" id="navSavedCount">0</span>
+        </button>
+        <button class="nav-tab" data-view="pricing" role="tab" aria-selected="false" id="tabBtnPricing">
+          <svg class="tab-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"/>
+          </svg>
+          <span>Pro Plan</span>
+        </button>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="header-actions">
+        <!-- Credit Counter Pill -->
+        <button class="credits-pill" id="creditsBtn" title="Daily generations available. Click to manage.">
+          <span class="credit-icon">⚡</span>
+          <span class="credit-text" id="creditsDisplay">15/15 Credits</span>
+        </button>
+
+        <!-- AI Engine Mode Indicator Button -->
+        <button class="ai-status-btn" id="aiSettingsBtn" title="Click to view AI Engine settings & API connection">
+          <span class="status-dot dot-fallback" id="engineDot"></span>
+          <span class="engine-label" id="engineLabel">Smart Engine</span>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button class="icon-btn theme-toggle" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+
+        <!-- Install PWA Button (Hidden if already standalone/installed) -->
+        <button class="pwa-install-btn hidden" id="pwaInstallBtn" title="Install CaptionGenius on your device">
+          <svg class="install-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+          <span>Install</span>
+        </button>
+
+        <!-- Help & Instructions Button -->
+        <button class="icon-btn" id="helpGuideBtn" aria-label="Help & Installation Guide" title="How to use, Windows & iPhone guide">
+          <span>❓</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="main-content">
+    
+    <!-- ================= VIEW 1: GENERATOR ================= -->
+    <section class="view-panel active" id="viewGenerator">
+      <!-- Hero Banner -->
+      <div class="hero-section">
+        <div class="hero-badge">
+          <span class="sparkle">✨</span>
+          <span>Next-Generation Social Content Engine for Creators</span>
+        </div>
+        <h1 class="hero-title">
+          Generate Viral Captions, Hooks &amp; Hashtags in <span class="gradient-text">Seconds</span>
+        </h1>
+        <p class="hero-subtitle">
+          Engineered for TikTok, Instagram, Facebook, and YouTube creators in Sri Lanka 🇱🇰 &amp; worldwide. Natural support for English, Sinhala (සිංහල), and Tamil (தமிழ்).
+        </p>
+      </div>
+
+      <!-- Generator Workspace Grid -->
+      <div class="generator-grid">
+        
+        <!-- Left Panel: Input & Control Card -->
+        <div class="card glass-card input-card">
+          <div class="card-header">
+            <div class="card-title-group">
+              <span class="step-num">1</span>
+              <h2 class="card-title">Describe Your Content</h2>
+            </div>
+            <span class="card-hint">Be as specific or simple as you like</span>
+          </div>
+
+          <!-- Prompt Textarea -->
+          <div class="form-group">
+            <label for="promptInput" class="form-label">
+              <span>What is your post or video about?</span>
+              <span class="char-count" id="promptCharCount">0/300</span>
+            </label>
+            <div class="textarea-wrapper">
+              <textarea 
+                id="promptInput" 
+                class="form-textarea" 
+                placeholder="e.g. Trying street food at Colombo Pettah Night Market, Kottu Roti review with friends, scenic tea train in Ella, 5 mistakes new gym beginners make..."
+                rows="4"
+                maxlength="300"
+              ></textarea>
+              <button class="clear-input-btn hidden" id="clearPromptBtn" title="Clear text">✕</button>
+            </div>
+
+            <!-- Quick Inspiration Chips -->
+            <div class="chips-container">
+              <span class="chips-label">Quick Ideas:</span>
+              <button type="button" class="chip-btn" data-preset="Ella scenic train ride with Ceylon tea plantations and misty mountains">🚂 Ella Scenic Train</button>
+              <button type="button" class="chip-btn" data-preset="Late night Kottu Roti and spicy street food review in Colombo">🍛 Colombo Street Food</button>
+              <button type="button" class="chip-btn" data-preset="3 daily habits that helped me grow my online freelance business">💼 Freelance &amp; Hustle</button>
+              <button type="button" class="chip-btn" data-preset="කොළඹ ලස්සනම තැන් 5ක් යාළුවොත් එක්ක යන්න">🇱🇰 කොළඹ Vibes (Sinhala)</button>
+              <button type="button" class="chip-btn" data-preset="யாழ்ப்பாணத்தின் பாரம்பரிய சுவையான உணவுகள்">🇱🇰 யாழ்ப்பாணம் Food (Tamil)</button>
+            </div>
+          </div>
+
+          <!-- Platform Selector -->
+          <div class="form-group">
+            <label class="form-label">
+              <span>Target Social Platform</span>
+              <span class="field-info" id="platformHint">Viral short-form algorithm ready</span>
+            </label>
+            <div class="platform-grid" role="radiogroup" aria-label="Social Media Platform">
+              <label class="platform-card active" data-platform="tiktok">
+                <input type="radio" name="platform" value="tiktok" checked>
+                <div class="platform-icon-wrap tiktok-bg">
+                  <svg viewBox="0 0 24 24" class="platform-icon" fill="currentColor">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.33 6.33 0 0 0 6.33-6.33V9.05a8.16 8.16 0 0 0 4.92 1.64v-3.5a4.85 4.85 0 0 1-1-.5z"/>
+                  </svg>
+                </div>
+                <div class="platform-info">
+                  <span class="platform-name">TikTok</span>
+                  <span class="platform-desc">Viral hooks &amp; sound cues</span>
+                </div>
+              </label>
+
+              <label class="platform-card" data-platform="instagram">
+                <input type="radio" name="platform" value="instagram">
+                <div class="platform-icon-wrap ig-bg">
+                  <svg viewBox="0 0 24 24" class="platform-icon" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </div>
+                <div class="platform-info">
+                  <span class="platform-name">Instagram</span>
+                  <span class="platform-desc">Aesthetic, spacing &amp; tags</span>
+                </div>
+              </label>
+
+              <label class="platform-card" data-platform="facebook">
+                <input type="radio" name="platform" value="facebook">
+                <div class="platform-icon-wrap fb-bg">
+                  <svg viewBox="0 0 24 24" class="platform-icon" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </div>
+                <div class="platform-info">
+                  <span class="platform-name">Facebook</span>
+                  <span class="platform-desc">Storytelling &amp; discussions</span>
+                </div>
+              </label>
+
+              <label class="platform-card" data-platform="youtube">
+                <input type="radio" name="platform" value="youtube">
+                <div class="platform-icon-wrap yt-bg">
+                  <svg viewBox="0 0 24 24" class="platform-icon" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </div>
+                <div class="platform-info">
+                  <span class="platform-name">YouTube</span>
+                  <span class="platform-desc">SEO descriptions &amp; CTAs</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Language Selector -->
+          <div class="form-group">
+            <label class="form-label">
+              <span>Primary Language</span>
+              <span class="field-info">Native creator expressions</span>
+            </label>
+            <div class="lang-selector-group">
+              <label class="lang-pill active">
+                <input type="radio" name="language" value="english" checked>
+                <span class="flag">🇬🇧</span>
+                <span class="lang-title">English</span>
+              </label>
+              <label class="lang-pill">
+                <input type="radio" name="language" value="sinhala">
+                <span class="flag">🇱🇰</span>
+                <span class="lang-title">Sinhala (සිංහල)</span>
+              </label>
+              <label class="lang-pill">
+                <input type="radio" name="language" value="tamil">
+                <span class="flag">🇱🇰</span>
+                <span class="lang-title">Tamil (தமிழ்)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Tone Selector -->
+          <div class="form-group">
+            <label class="form-label">
+              <span>Tone &amp; Style</span>
+              <span class="field-info">Matches creator personality</span>
+            </label>
+            <div class="tone-grid">
+              <label class="tone-chip active">
+                <input type="radio" name="tone" value="funny" checked>
+                <span class="tone-emoji">😂</span>
+                <span>Funny &amp; Relatable</span>
+              </label>
+              <label class="tone-chip">
+                <input type="radio" name="tone" value="professional">
+                <span class="tone-emoji">💼</span>
+                <span>Professional &amp; Authority</span>
+              </label>
+              <label class="tone-chip">
+                <input type="radio" name="tone" value="inspirational">
+                <span class="tone-emoji">🚀</span>
+                <span>Inspirational &amp; Hype</span>
+              </label>
+              <label class="tone-chip">
+                <input type="radio" name="tone" value="romantic">
+                <span class="tone-emoji">💖</span>
+                <span>Romantic &amp; Sweet</span>
+              </label>
+              <label class="tone-chip">
+                <input type="radio" name="tone" value="aesthetic">
+                <span class="tone-emoji">✨</span>
+                <span>Aesthetic &amp; Vibe</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Length Selector -->
+          <div class="form-group">
+            <label class="form-label">
+              <span>Caption Length</span>
+              <span class="field-info">Optimized for reading speed</span>
+            </label>
+            <div class="segmented-control">
+              <label class="segment-btn">
+                <input type="radio" name="length" value="short">
+                <span>⚡ Short (Punchy)</span>
+              </label>
+              <label class="segment-btn active">
+                <input type="radio" name="length" value="medium" checked>
+                <span>📝 Medium (Story + CTA)</span>
+              </label>
+              <label class="segment-btn">
+                <input type="radio" name="length" value="long">
+                <span>📖 Long (In-Depth / SEO)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Advanced Customization Accordion -->
+          <details class="advanced-accordion" id="advancedAccordion">
+            <summary class="advanced-summary">
+              <span class="summary-text">⚙️ Advanced Options (Hooks, CTAs, Hashtags, Emojis)</span>
+              <span class="chevron">▼</span>
+            </summary>
+            <div class="advanced-body">
+              <div class="toggle-option">
+                <label class="switch-label" for="optIncludeHooks">
+                  <input type="checkbox" id="optIncludeHooks" checked>
+                  <span class="switch-slider"></span>
+                  <span class="switch-text">Generate Catchy Opening Hooks (First 3 seconds)</span>
+                </label>
+              </div>
+
+              <div class="toggle-option">
+                <label class="switch-label" for="optIncludeCTA">
+                  <input type="checkbox" id="optIncludeCTA" checked>
+                  <span class="switch-slider"></span>
+                  <span class="switch-text">Include Call-to-Action (Comment, Save, Follow)</span>
+                </label>
+              </div>
+
+              <div class="sub-form-row">
+                <div class="sub-form-col">
+                  <label class="sub-label" for="optEmojiDensity">Emoji Density</label>
+                  <select id="optEmojiDensity" class="form-select">
+                    <option value="minimal">Minimal (1 - 2 subtle)</option>
+                    <option value="standard" selected>Standard (Balanced &amp; expressive)</option>
+                    <option value="rich">Rich (High energy &amp; colorful)</option>
+                  </select>
+                </div>
+                <div class="sub-form-col">
+                  <label class="sub-label" for="optHashtagsCount">Hashtags Count</label>
+                  <select id="optHashtagsCount" class="form-select">
+                    <option value="5">Compact (5 top tags)</option>
+                    <option value="12" selected>Standard (10 - 15 tags)</option>
+                    <option value="25">Max Reach (20 - 30 tags)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Generation Trigger Button -->
+          <div class="generate-action-wrap">
+            <button class="btn btn-primary btn-generate" id="generateBtn">
+              <span class="btn-sparkle">✨</span>
+              <span class="btn-text">Generate 3 Viral Variations</span>
+              <span class="shortcut-tag">Ctrl + ↵</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Panel: Results & Variations Display Card -->
+        <div class="card glass-card results-card" id="resultsContainer">
+          
+          <!-- Engine Notice Banner -->
+          <div class="engine-banner" id="engineBanner">
+            <div class="banner-left">
+              <span class="banner-icon" id="bannerIcon">⚡</span>
+              <div class="banner-text">
+                <span class="banner-title" id="bannerTitle">Creative Template Fallback Engine Active</span>
+                <span class="banner-sub" id="bannerSub">Free &amp; Offline. You can connect a real Gemini AI API key anytime.</span>
+              </div>
+            </div>
+            <button class="banner-btn" id="bannerConfigBtn" title="Switch or configure AI engine">Configure AI</button>
+          </div>
+
+          <!-- Empty State (Shown before first generation) -->
+          <div class="empty-results-state" id="emptyState">
+            <div class="empty-graphic">
+              <div class="pulse-ring"></div>
+              <span class="empty-emoji">🪄</span>
+            </div>
+            <h3 class="empty-title">Ready to Create Viral Captions?</h3>
+            <p class="empty-desc">
+              Enter a topic on the left, pick your platform and language, and click <strong>Generate</strong>. You'll get 3 unique variations with hooks, formatted text, and tailored hashtags.
+            </p>
+            <div class="feature-pills-list">
+              <span class="feature-pill">🎯 TikTok Sound &amp; Hook cues</span>
+              <span class="feature-pill">📸 Clean Instagram line-breaks</span>
+              <span class="feature-pill">🇱🇰 Sinhala &amp; Tamil native slang</span>
+              <span class="feature-pill">📋 1-Click Copy to clipboard</span>
+            </div>
+          </div>
+
+          <!-- Loading State (Shimmer Skeleton) -->
+          <div class="loading-state hidden" id="loadingState">
+            <div class="loader-pulse-header">
+              <div class="spinner-glow"></div>
+              <div class="loading-messages" id="loadingText">Analyzing social trends &amp; crafting viral hooks...</div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton-line skeleton-title"></div>
+              <div class="skeleton-line skeleton-hook"></div>
+              <div class="skeleton-line skeleton-text"></div>
+              <div class="skeleton-line skeleton-text"></div>
+              <div class="skeleton-line skeleton-tags"></div>
+            </div>
+          </div>
+
+          <!-- Populated Results Container (Hidden by default) -->
+          <div class="results-content hidden" id="resultsContent">
+            
+            <!-- Variations Tab Header -->
+            <div class="variations-header">
+              <div class="variation-tabs" role="tablist">
+                <button class="var-tab active" data-var-index="0" role="tab" id="varTab0">
+                  <span class="var-badge">A</span>
+                  <span>🔥 Viral &amp; Punchy</span>
+                </button>
+                <button class="var-tab" data-var-index="1" role="tab" id="varTab1">
+                  <span class="var-badge">B</span>
+                  <span>📖 Story &amp; Connect</span>
+                </button>
+                <button class="var-tab" data-var-index="2" role="tab" id="varTab2">
+                  <span class="var-badge">C</span>
+                  <span>✨ Aesthetic &amp; Vibe</span>
+                </button>
+              </div>
+
+              <!-- Top Quick Action: Favorite Star -->
+              <button class="icon-btn star-btn" id="favoriteActiveBtn" title="Save to Favorites" aria-label="Save to Favorites">
+                <span class="star-icon">☆</span>
+              </button>
+            </div>
+
+            <!-- Active Variation Display Card -->
+            <div class="variation-card">
+              
+              <!-- Catchy Hook Section -->
+              <div class="hook-box" id="hookContainer">
+                <div class="hook-header">
+                  <span class="hook-badge">🪝 3-Second Opening Hook</span>
+                  <button class="mini-copy-btn" id="copyHookBtn" title="Copy hook only">Copy Hook</button>
+                </div>
+                <div class="hook-text" id="hookDisplay">
+                  "Stop scrolling if you are planning to visit Sri Lanka this month! 🇱🇰👇"
+                </div>
+              </div>
+
+              <!-- Caption Body Section -->
+              <div class="caption-body-box">
+                <div class="caption-header">
+                  <span class="box-label">📝 Caption Body</span>
+                  <div class="meta-counters">
+                    <span class="platform-char-limit" id="charCounter">230 / 2,200 chars</span>
+                  </div>
+                </div>
+                <div class="caption-text" id="captionTextDisplay" contenteditable="true" spellcheck="false" title="Click anywhere to edit caption directly">
+                  Caption will appear here...
+                </div>
+                <span class="edit-hint">💡 Tip: You can edit or tweak the text directly before copying!</span>
+              </div>
+
+              <!-- Call to Action (CTA) Section -->
+              <div class="cta-box" id="ctaContainer">
+                <span class="cta-badge">📣 Call To Action:</span>
+                <span class="cta-text" id="ctaDisplay">Comment your favorite place below and share this with your travel crew! ✈️</span>
+              </div>
+
+              <!-- Hashtags Section -->
+              <div class="hashtags-box">
+                <div class="hashtags-header">
+                  <div class="hashtags-title-row">
+                    <span class="box-label">🏷️ Trending Hashtags</span>
+                    <span class="hashtags-count-badge" id="hashtagCountBadge">12 tags</span>
+                  </div>
+                  <button class="mini-copy-btn" id="copyTagsOnlyBtn" title="Copy hashtags only">Copy Hashtags</button>
+                </div>
+                <div class="hashtags-cloud" id="hashtagsDisplay">
+                  <!-- Tag pills rendered via JS -->
+                </div>
+              </div>
+
+              <!-- Primary Action Toolbar -->
+              <div class="action-toolbar">
+                <button class="btn btn-action-copy btn-primary-action" id="copyFullCaptionBtn">
+                  <span class="action-icon">📋</span>
+                  <span>Copy Full Caption</span>
+                </button>
+                <button class="btn btn-action-sub" id="copyHashtagsBtn">
+                  <span class="action-icon">🏷️</span>
+                  <span>Copy Tags</span>
+                </button>
+                <button class="btn btn-action-sub" id="saveCaptionBtn">
+                  <span class="action-icon" id="saveIcon">💾</span>
+                  <span id="saveBtnText">Save Caption</span>
+                </button>
+                <button class="btn btn-action-sub" id="shareCaptionBtn" title="Share via WhatsApp, Messages or Web Share">
+                  <span class="action-icon">📤</span>
+                  <span>Share</span>
+                </button>
+                <button class="btn btn-action-sub" id="regenerateBtn" title="Generate 3 new variations with same settings">
+                  <span class="action-icon">🔄</span>
+                  <span>Reroll</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 2: DASHBOARD ================= -->
+    <section class="view-panel" id="viewDashboard">
+      <div class="panel-container">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">Creator Analytics &amp; Dashboard</h2>
+            <p class="panel-subtitle">Track your content generations, remaining daily credits, and popular channels.</p>
+          </div>
+          <button class="btn btn-secondary" id="dashCreateNewBtn">✨ Create New Caption</button>
+        </div>
+
+        <!-- Metrics Cards Grid -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon-wrap violet-grad">⚡</div>
+            <div class="metric-details">
+              <span class="metric-label">Daily Free Credits</span>
+              <span class="metric-val" id="dashCreditsVal">15 / 15</span>
+              <span class="metric-sub" id="dashResetTimer">Resets at midnight</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-wrap blue-grad">🚀</div>
+            <div class="metric-details">
+              <span class="metric-label">Total Generations</span>
+              <span class="metric-val" id="dashTotalGenVal">0</span>
+              <span class="metric-sub">Captions created all-time</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-wrap pink-grad">⭐</div>
+            <div class="metric-details">
+              <span class="metric-label">Saved Favorites</span>
+              <span class="metric-val" id="dashSavedVal">0</span>
+              <span class="metric-sub">Stored locally in browser</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-wrap cyan-grad">🏆</div>
+            <div class="metric-details">
+              <span class="metric-label">Top Platform</span>
+              <span class="metric-val" id="dashTopPlatformVal">TikTok</span>
+              <span class="metric-sub">Most generated channel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Breakdown Section -->
+        <div class="dashboard-breakdown-grid">
+          <!-- Platform Distribution -->
+          <div class="card glass-card dash-card">
+            <h3 class="card-inner-title">Platform Distribution</h3>
+            <div class="distribution-list">
+              <div class="dist-row">
+                <div class="dist-info">
+                  <span class="dist-name">TikTok</span>
+                  <span class="dist-val" id="tiktokDistCount">0</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill tiktok-fill" id="tiktokBar" style="width: 25%"></div></div>
+              </div>
+              <div class="dist-row">
+                <div class="dist-info">
+                  <span class="dist-name">Instagram</span>
+                  <span class="dist-val" id="igDistCount">0</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill ig-fill" id="igBar" style="width: 25%"></div></div>
+              </div>
+              <div class="dist-row">
+                <div class="dist-info">
+                  <span class="dist-name">Facebook</span>
+                  <span class="dist-val" id="fbDistCount">0</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill fb-fill" id="fbBar" style="width: 25%"></div></div>
+              </div>
+              <div class="dist-row">
+                <div class="dist-info">
+                  <span class="dist-name">YouTube</span>
+                  <span class="dist-val" id="ytDistCount">0</span>
+                </div>
+                <div class="progress-bar"><div class="progress-fill yt-fill" id="ytBar" style="width: 25%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language & Creator Tips -->
+          <div class="card glass-card dash-card">
+            <h3 class="card-inner-title">Creator Pro Tips for Sri Lanka</h3>
+            <div class="tips-list">
+              <div class="tip-item">
+                <span class="tip-num">1</span>
+                <div>
+                  <strong>Hooks win the first 3 seconds:</strong> Always place your hook in the first line of your caption and speak it aloud in video.
+                </div>
+              </div>
+              <div class="tip-item">
+                <span class="tip-num">2</span>
+                <div>
+                  <strong>Combine Sinhala/Tamil with English:</strong> Hybrid captions (e.g. Sinhala hook + English hashtags) attract both local Lankan audiences and overseas diaspora.
+                </div>
+              </div>
+              <div class="tip-item">
+                <span class="tip-num">3</span>
+                <div>
+                  <strong>Spacing Matters:</strong> Instagram and Facebook hide captions behind "...more". Our generator automatically formats line breaks for maximum readability.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Generations History in Dashboard -->
+        <div class="card glass-card dash-card history-dash-card">
+          <div class="card-header">
+            <h3 class="card-inner-title">Recent Activity</h3>
+            <button class="btn btn-sm btn-ghost" id="dashViewAllSavedBtn">View All in Saved →</button>
+          </div>
+          <div class="recent-list" id="dashRecentList">
+            <div class="empty-state-sm">No recent generations yet. Generate your first caption to see it here!</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 3: SAVED & HISTORY ================= -->
+    <section class="view-panel" id="viewSaved">
+      <div class="panel-container">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">Saved Captions &amp; History</h2>
+            <p class="panel-subtitle">All your favorited captions and past generations safely stored in your browser.</p>
+          </div>
+          <div class="saved-actions-top">
+            <button class="btn btn-secondary btn-sm" id="exportTxtBtn">📥 Export (.txt)</button>
+            <button class="btn btn-secondary btn-sm" id="exportJsonBtn">💾 Export (.json)</button>
+            <button class="btn btn-danger-ghost btn-sm" id="clearAllHistoryBtn">🗑️ Clear All</button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="filter-controls-bar">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="savedSearchInput" class="form-input search-input" placeholder="Search by topic, caption, or hashtag...">
+          </div>
+          <div class="filter-dropdowns">
+            <select id="filterTypeSelect" class="form-select filter-select">
+              <option value="favorites" selected>⭐ Favorites Only</option>
+              <option value="all">🕒 All History</option>
+            </select>
+            <select id="filterPlatformSelect" class="form-select filter-select">
+              <option value="all" selected>All Platforms</option>
+              <option value="tiktok">TikTok</option>
+              <option value="instagram">Instagram</option>
+              <option value="facebook">Facebook</option>
+              <option value="youtube">YouTube</option>
+            </select>
+            <select id="filterLangSelect" class="form-select filter-select">
+              <option value="all" selected>All Languages</option>
+              <option value="english">English</option>
+              <option value="sinhala">Sinhala (සිංහල)</option>
+              <option value="tamil">Tamil (தமிழ்)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Saved Captions List -->
+        <div class="saved-cards-list" id="savedCardsList">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Empty State for Saved -->
+        <div class="empty-saved-state hidden" id="emptySavedState">
+          <span class="empty-saved-icon">⭐</span>
+          <h3>No Saved Captions Found</h3>
+          <p>When you generate captions, click the <strong>☆ Favorite</strong> or <strong>Save Caption</strong> button to save them here for quick reuse anytime.</p>
+          <button class="btn btn-primary" id="savedGoGenerateBtn">Go to Generator</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 4: PRO PRICING & PLAN ================= -->
+    <section class="view-panel" id="viewPricing">
+      <div class="panel-container">
+        <div class="pricing-hero">
+          <div class="hero-badge">💎 Transparent Creator Plans</div>
+          <h2 class="panel-title">Simple, Creator-Friendly Pricing</h2>
+          <p class="panel-subtitle">Start for free with generous daily credits or unlock Pro features. No forced credit cards!</p>
+        </div>
+
+        <!-- Prototype Pro Simulator Switch -->
+        <div class="demo-pro-switch-wrap">
+          <div class="demo-pro-info">
+            <span class="demo-tag">Prototype Feature</span>
+            <strong>Test Pro Mode Free:</strong> Experience unlimited generations and Pro badges right now!
+          </div>
+          <label class="switch-label" for="proDemoToggle">
+            <input type="checkbox" id="proDemoToggle">
+            <span class="switch-slider"></span>
+            <span class="switch-text" id="proDemoStatusLabel">Free Mode Active</span>
+          </label>
+        </div>
+
+        <!-- Pricing Cards Comparison -->
+        <div class="pricing-grid">
+          <!-- Free Plan -->
+          <div class="card glass-card pricing-card">
+            <div class="pricing-card-header">
+              <span class="plan-badge">Starter</span>
+              <h3 class="plan-name">Free Creator</h3>
+              <div class="plan-price">
+                <span class="price-currency">$</span>
+                <span class="price-amount">0</span>
+                <span class="price-period">/ forever</span>
+              </div>
+              <p class="plan-desc">Perfect for casual creators and beginners building their audience.</p>
+            </div>
+            <ul class="plan-features">
+              <li>✓ <strong>15 Free Generations</strong> per day</li>
+              <li>✓ All 4 Platforms (TikTok, IG, FB, YouTube)</li>
+              <li>✓ English, Sinhala &amp; Tamil support</li>
+              <li>✓ All 5 Tones &amp; Length selectors</li>
+              <li>✓ Offline Smart Creative Template Engine</li>
+              <li>✓ 1-Click Copy and Saved Captions library</li>
+              <li>✓ Installable as mobile &amp; desktop PWA</li>
+            </ul>
+            <button class="btn btn-secondary btn-block" id="currentFreePlanBtn" disabled>Current Active Plan</button>
+          </div>
+
+          <!-- Pro Plan -->
+          <div class="card glass-card pricing-card pro-card">
+            <div class="pricing-card-header">
+              <span class="plan-badge pro-badge">Most Popular</span>
+              <h3 class="plan-name">Pro Creator</h3>
+              <div class="plan-price">
+                <span class="price-currency">$</span>
+                <span class="price-amount">9</span>
+                <span class="price-period">/ month (or ~LKR 2,800)</span>
+              </div>
+              <p class="plan-desc">For serious influencers, digital agencies, and Sri Lankan brands.</p>
+            </div>
+            <ul class="plan-features">
+              <li>✓ <strong>Unlimited Generations</strong> (No daily limits)</li>
+              <li>✓ Real AI Priority Gemini Flash Connection</li>
+              <li>✓ Custom Brand Voice presets</li>
+              <li>✓ High-reach Hashtag Vaults for Sri Lanka</li>
+              <li>✓ Bulk Export to CSV &amp; JSON</li>
+              <li>✓ Singlish &amp; Tanglish bilingual generator</li>
+              <li>✓ Priority support &amp; early access features</li>
+            </ul>
+            <button class="btn btn-primary btn-block" id="activateProDemoBtn">
+              ✨ Activate Pro Demo Preview
+            </button>
+          </div>
+        </div>
+
+        <!-- Cost Breakdown & Transparency Section -->
+        <div class="card glass-card transparency-card">
+          <h3 class="card-inner-title">💡 Running Costs &amp; Free Tier Transparency</h3>
+          <p class="transparency-desc">
+            We believe in 100% transparency. You do not need to spend any money to use this app:
+          </p>
+          <div class="transparency-grid">
+            <div class="trans-item">
+              <strong>1. Hosting: $0 / Free</strong>
+              <span>Deploy to Vercel, Netlify, or GitHub Pages at zero cost.</span>
+            </div>
+            <div class="trans-item">
+              <strong>2. Google Gemini API: $0 Free Tier</strong>
+              <span>Google provides up to 15 free AI requests per minute on Gemini 1.5 Flash without charging.</span>
+            </div>
+            <div class="trans-item">
+              <strong>3. Offline Engine: $0 Forever</strong>
+              <span>Our built-in creative engine runs directly in your browser with zero external calls.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- 1. AI Engine Settings Modal -->
+  <div class="modal-backdrop hidden" id="aiSettingsModal" role="dialog" aria-modal="true" aria-labelledby="aiModalTitle">
+    <div class="modal-card glass-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-icon">⚙️</span>
+          <h3 class="modal-title" id="aiModalTitle">AI Engine &amp; API Configuration</h3>
+        </div>
+        <button class="modal-close-btn" id="closeAiModalBtn" aria-label="Close modal">✕</button>
+      </div>
+      
+      <div class="modal-body">
+        <p class="modal-desc">
+          Choose how CaptionGenius creates your captions. By default, it uses the high-performance local creative engine. You can also connect a live Google Gemini AI API key.
+        </p>
+
+        <!-- Engine Option 1: Built-in Smart Fallback -->
+        <label class="engine-option-card active" id="optEngineTemplate">
+          <input type="radio" name="aiEngineMode" value="template" checked>
+          <div class="engine-option-content">
+            <div class="engine-opt-header">
+              <span class="engine-opt-title">⚡ Smart Creative Engine (Default)</span>
+              <span class="badge-free">100% Free &amp; Offline</span>
+            </div>
+            <p class="engine-opt-desc">
+              Uses high-converting, curated viral templates, hooks, and hashtags for Sri Lankan &amp; global creators. Zero API keys required, works anywhere, instant generation.
+            </p>
+            <div class="status-indicator">
+              <span class="status-dot dot-fallback"></span>
+              <span>Active &amp; Ready</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Engine Option 2: Direct Google Gemini API Key -->
+        <label class="engine-option-card" id="optEngineGemini">
+          <input type="radio" name="aiEngineMode" value="gemini">
+          <div class="engine-option-content">
+            <div class="engine-opt-header">
+              <span class="engine-opt-title">✨ Google Gemini AI (Live API)</span>
+              <span class="badge-free">Free Tier Available</span>
+            </div>
+            <p class="engine-opt-desc">
+              Connect Google's Gemini 1.5 Flash API directly. Generates fully dynamic custom AI captions in any style or language.
+            </p>
+            
+            <!-- API Key Input Field (Revealed when selected) -->
+            <div class="api-key-input-wrap hidden" id="geminiKeyWrap">
+              <label for="geminiApiKeyInput" class="sub-label">Enter your Gemini API Key:</label>
+              <div class="input-with-action">
+                <input 
+                  type="password" 
+                  id="geminiApiKeyInput" 
+                  class="form-input" 
+                  placeholder="AIzaSy..." 
+                  autocomplete="off"
+                >
+                <button type="button" class="btn btn-sm btn-secondary" id="toggleApiKeyVisibilityBtn">Show</button>
+                <button type="button" class="btn btn-sm btn-primary" id="testApiKeyBtn">Test Key</button>
+              </div>
+              <div class="key-security-note">
+                🔒 <strong>Privacy Guarantee:</strong> Your API key is stored only inside your own browser's private <code>localStorage</code>. It is never transmitted to any third-party server.
+              </div>
+              <div class="get-key-link">
+                <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">
+                  👉 Get a free Gemini API key from Google AI Studio (takes 1 minute) ↗
+                </a>
+              </div>
+              <div class="test-result-msg hidden" id="apiKeyTestResult"></div>
+            </div>
+          </div>
+        </label>
+
+        <!-- Engine Option 3: Custom Backend Proxy -->
+        <label class="engine-option-card" id="optEngineBackend">
+          <input type="radio" name="aiEngineMode" value="backend">
+          <div class="engine-option-content">
+            <div class="engine-opt-header">
+              <span class="engine-opt-title">🛡️ Secure Backend Proxy (Optional)</span>
+              <span class="badge-sub">For Production</span>
+            </div>
+            <p class="engine-opt-desc">
+              Connect to your own deployed Express / Vercel serverless endpoint (e.g. <code>/api/generate</code>) where keys are kept on the server.
+            </p>
+            <div class="backend-url-input-wrap hidden" id="backendUrlWrap">
+              <input type="url" id="backendUrlInput" class="form-input" placeholder="http://localhost:3000/api/generate or https://your-site.vercel.app/api/generate">
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="cancelAiSettingsBtn">Cancel</button>
+        <button class="btn btn-primary" id="saveAiSettingsBtn">Save Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Help & Beginner Guide Modal -->
+  <div class="modal-backdrop hidden" id="helpGuideModal" role="dialog" aria-modal="true" aria-labelledby="helpModalTitle">
+    <div class="modal-card glass-card help-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-icon">📖</span>
+          <h3 class="modal-title" id="helpModalTitle">Beginner Guide &amp; Setup Instructions</h3>
+        </div>
+        <button class="modal-close-btn" id="closeHelpModalBtn" aria-label="Close modal">✕</button>
+      </div>
+      
+      <div class="modal-body help-body">
+        
+        <!-- Tab navigation inside help -->
+        <div class="help-tabs">
+          <button class="help-tab active" data-help-target="helpWindows">💻 Windows Run</button>
+          <button class="help-tab" data-help-target="helpIphone">📱 iPhone &amp; Android</button>
+          <button class="help-tab" data-help-target="helpPublish">🌐 Publish 100% Free</button>
+          <button class="help-tab" data-help-target="helpCosts">💰 Paid Services Info</button>
+        </div>
+
+        <!-- Section 1: Windows -->
+        <div class="help-content-panel active" id="helpWindows">
+          <h4>How to run CaptionGenius on Windows:</h4>
+          <ol class="help-steps">
+            <li>
+              <strong>Instant Run (Zero installs required):</strong> Simply find the <code>index.html</code> file in the folder and double-click it. It will open immediately in Microsoft Edge, Google Chrome, or your favorite browser!
+            </li>
+            <li>
+              <strong>Using VS Code Live Server (Recommended for developers):</strong>
+              Open the folder in VS Code, install the "Live Server" extension, right click <code>index.html</code> and click <em>"Open with Live Server"</em>.
+            </li>
+            <li>
+              <strong>Optional Node.js Backend:</strong>
+              If you have Node.js installed and want a secure server, open PowerShell, run <code>npm install</code> then <code>npm start</code> to launch at <code>http://localhost:3000</code>.
+            </li>
+          </ol>
+        </div>
+
+        <!-- Section 2: iPhone & Android -->
+        <div class="help-content-panel" id="helpIphone">
+          <h4>How to install on iPhone &amp; Android as a PWA:</h4>
+          <ol class="help-steps">
+            <li>
+              <strong>On iPhone / iPad (iOS Safari):</strong>
+              <p>1. Open your published website link in <strong>Safari</strong> (must be Safari for iOS PWA installation).</p>
+              <p>2. Tap the <strong>Share</strong> button at the bottom of the screen (square with upward arrow).</p>
+              <p>3. Scroll down and tap <strong>"Add to Home Screen"</strong>.</p>
+              <p>4. Tap <strong>"Add"</strong> in the top-right corner. The CaptionGenius icon will appear right on your iPhone home screen, working just like a native App store app!</p>
+            </li>
+            <li>
+              <strong>On Android (Google Chrome):</strong>
+              <p>1. Open the site in Chrome.</p>
+              <p>2. Tap the <strong>"Install"</strong> button in our navigation bar or tap the three dots menu (⋮) -> <strong>"Install App"</strong>.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Section 3: Publish Free -->
+        <div class="help-content-panel" id="helpPublish">
+          <h4>How to publish this website 100% Free:</h4>
+          <div class="publish-option">
+            <strong>Method A: Netlify Drop (Fastest - 30 seconds):</strong>
+            <p>Go to <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a>, drag and drop this entire project folder into the browser window, and you will get a live <code>https://your-app.netlify.app</code> URL instantly for free.</p>
+          </div>
+          <div class="publish-option">
+            <strong>Method B: Vercel:</strong>
+            <p>Upload this folder to GitHub, go to <a href="https://vercel.com" target="_blank" rel="noopener">Vercel.com</a>, import the repo, and click Deploy. It includes automated HTTPS and fast global CDN.</p>
+          </div>
+          <div class="publish-option">
+            <strong>Method C: GitHub Pages:</strong>
+            <p>Push to a GitHub repository, go to Settings -> Pages -> Deploy from branch "main" -> save. Live in 1 minute.</p>
+          </div>
+        </div>
+
+        <!-- Section 4: Costs -->
+        <div class="help-content-panel" id="helpCosts">
+          <h4>Paid Services Breakdown &amp; Transparency:</h4>
+          <table class="cost-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Type</th>
+                <th>Cost</th>
+                <th>Is it required?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Smart Template Engine</strong></td>
+                <td>Built-in</td>
+                <td><span class="badge-free">$0 Free</span></td>
+                <td>Default &amp; included</td>
+              </tr>
+              <tr>
+                <td><strong>Google Gemini API</strong></td>
+                <td>AI API</td>
+                <td><span class="badge-free">$0 Free Tier</span> (15 RPM)</td>
+                <td>Optional (Free key from AI Studio)</td>
+              </tr>
+              <tr>
+                <td><strong>Netlify / Vercel / GitHub</strong></td>
+                <td>Hosting</td>
+                <td><span class="badge-free">$0 Free Tier</span></td>
+                <td>Zero hosting costs</td>
+              </tr>
+              <tr>
+                <td><strong>Custom Domain (.com / .lk)</strong></td>
+                <td>Domain</td>
+                <td>Optional ($10 - $30/yr)</td>
+                <td>Not required (use free subdomains)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="cost-note">
+            ⚠️ <strong>Notice:</strong> We will never automatically purchase or subscribe to any service on your behalf. The application is completely usable without spending anything.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="closeHelpModalActionBtn">Got It!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="script.js"></script>
+</body>
+</html>
